@@ -15,10 +15,10 @@ def test_encrypt_message():
     # Teste com a Key negativa
     assert encrypt_message("adalberto", -1) == "otreblada"
 
-    # Teste com tipo inválido para message
+    # Teste com tipo inválido para message([])
     with pytest.raises(TypeError, match="tipo inválido para message"):
         encrypt_message([], 13)
 
-    # Teste com tipo inválido para key
+    # Teste com tipo inválido para key("")
     with pytest.raises(TypeError, match="tipo inválido para key"):
-        encrypt_message("", "")
+        encrypt_message("adalberto", "")
